@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Xcode Build
-      run: xcodebuild clean -project sharkle.xcodeproj -scheme sharkle -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=15.2'
+      run: xcodebuild clean -project Sharkle.xcodeproj -scheme Sharkle -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=15.2'
 
   SwiftLint:
      runs-on: ubuntu-latest
@@ -21,4 +21,4 @@ jobs:
        - name: SwiftLint
          uses: norio-nomura/action-swiftlint@3.2.1
          env:
-           WORKING_DIRECTORY: sharkle
+           WORKING_DIRECTORY: Sharkle
