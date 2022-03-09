@@ -11,6 +11,10 @@
 		7716871327CB1B5B006949CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7716871227CB1B5B006949CA /* ContentView.swift */; };
 		7716871527CB1B5C006949CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7716871427CB1B5C006949CA /* Assets.xcassets */; };
 		7716871827CB1B5C006949CA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7716871727CB1B5C006949CA /* Preview Assets.xcassets */; };
+		7727AD0627D5F73800E3123E /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7727AD0527D5F73800E3123E /* RootView.swift */; };
+		7727AD0827D5F7FA00E3123E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7727AD0727D5F7FA00E3123E /* HomeView.swift */; };
+		7727AD0A27D5F8B600E3123E /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7727AD0927D5F8B600E3123E /* SearchView.swift */; };
+		7727AD0C27D5F9C600E3123E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7727AD0B27D5F9C600E3123E /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		7716871227CB1B5B006949CA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7716871427CB1B5C006949CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7716871727CB1B5C006949CA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7727AD0527D5F73800E3123E /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		7727AD0727D5F7FA00E3123E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		7727AD0927D5F8B600E3123E /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		7727AD0B27D5F9C600E3123E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +63,10 @@
 				7716871227CB1B5B006949CA /* ContentView.swift */,
 				7716871427CB1B5C006949CA /* Assets.xcassets */,
 				7716871627CB1B5C006949CA /* Preview Content */,
+				7727AD0527D5F73800E3123E /* RootView.swift */,
+				7727AD0727D5F7FA00E3123E /* HomeView.swift */,
+				7727AD0927D5F8B600E3123E /* SearchView.swift */,
+				7727AD0B27D5F9C600E3123E /* LoginView.swift */,
 			);
 			path = sharkle;
 			sourceTree = "<group>";
@@ -102,7 +114,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7716870827CB1B5B006949CA /* Build configuration list for PBXProject "sharkle" */;
+			buildConfigurationList = 7716870827CB1B5B006949CA /* Build configuration list for PBXProject "Sharkle" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -137,8 +149,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7727AD0C27D5F9C600E3123E /* LoginView.swift in Sources */,
+				7727AD0A27D5F8B600E3123E /* SearchView.swift in Sources */,
 				7716871327CB1B5B006949CA /* ContentView.swift in Sources */,
+				7727AD0827D5F7FA00E3123E /* HomeView.swift in Sources */,
 				7716871127CB1B5B006949CA /* sharkleApp.swift in Sources */,
+				7727AD0627D5F73800E3123E /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,7 +338,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7716870827CB1B5B006949CA /* Build configuration list for PBXProject "sharkle" */ = {
+		7716870827CB1B5B006949CA /* Build configuration list for PBXProject "Sharkle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7716871927CB1B5C006949CA /* Debug */,
