@@ -9,7 +9,16 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView(.vertical) {
+            ClubItemsRow()
+            
+            VStack(spacing: 15) {
+                ForEach(1..<10) { _ in
+                    ClubRow()
+                }
+            }
+        }
+        .frame(width: UIScreen.main.bounds.width)
     }
 }
 

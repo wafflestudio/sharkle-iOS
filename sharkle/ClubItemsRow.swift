@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ClubItemsRow: View {
     var body: some View {
-        VStack(alignment: .leading, spacing: 2) {
+        VStack(alignment: .leading, spacing: 10) {
             Text("지금 알림 신청 중!")
                 .font(.system(size: 24, weight: .bold))
             
