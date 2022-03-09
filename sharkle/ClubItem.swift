@@ -16,7 +16,7 @@ struct ClubItem: View {
                 .cornerRadius(15)
             
             Text("동아리 이름 1")
-                .frame(width: 84)
+                .frame(width: 84, height: 16, alignment: .center)
                 .font(.system(size: 14, weight: .medium))
                 .lineLimit(1)
             
