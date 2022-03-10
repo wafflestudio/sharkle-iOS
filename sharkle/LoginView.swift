@@ -12,62 +12,88 @@ struct LoginView: View {
     @State private var password: String = ""
     
     var body: some View {
-        NavigationView {
-            Color("LoginBackgroundColor")
-                .ignoresSafeArea()
-                .overlay(
-                    VStack(alignment: .leading, spacing: 10) {
-                        HStack {
-                            Image(systemName: "")
-                                .frame(width: 26, height: 26, alignment: .leading)
-                                .background(.gray)
-                                .cornerRadius(.infinity)
-                            
-                            Text("Sharkle")
-                        }
-                        .frame(width: 126, height: 26, alignment: .leading)
+        Color("LoginBackgroundColor")
+            .ignoresSafeArea()
+            .overlay(
+                VStack(alignment: .leading, spacing: 10) {
+                    HStack {
+                        Image(systemName: "")
+                            .frame(width: 26, height: 26, alignment: .leading)
+                            .background(.gray)
+                            .cornerRadius(.infinity)
                         
-                        VStack(spacing: 3) {
-                            TextField("아이디를 입력해주세요", text: $id)
-                                .frame(width: 253, height: 34, alignment: .center)
-                                .textFieldStyle(.roundedBorder)
-                            
-                            TextField("비밀번호를 입력해주세요", text: $password)
-                                .frame(width: 253, height: 34, alignment: .center)
-                                .textFieldStyle(.roundedBorder)
-                        }
-                        
-                        HStack(spacing: 17) {
-                            Button {
-                                
-                            } label: {
-                                Text("로그인")
-                                    .foregroundColor(.white)
-                                    .fontWeight(.medium)
-                            }
-                            .frame(width: 118, height: 38, alignment: .center)
-                            .background(.blue)
-                            .cornerRadius(5)
-
-                            Button {
-                                
-                            } label: {
-                                Text("회원 가입")
-                                    .foregroundColor(.gray)
-                                    .fontWeight(.medium)
-                            }
-                            .frame(width: 118, height: 38, alignment: .center)
-                            .background(.white)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 5)
-                                    .stroke(.gray, lineWidth: 1)
-                            )
-                        }
+                        Text("Sharkle")
                     }
-                    .frame(width: 300, height: 200, alignment: .center)
-                    .background(.white)
-                    .cornerRadius(15))
-        }
+                    .frame(width: 126, height: 26, alignment: .leading)
+                    
+                    VStack(spacing: 5) {
+                        HStack {
+                            Image(systemName: "person").foregroundColor(.gray)
+                            TextField("아이디를 입력해주세요", text: $id)
+                                .font(.subheadline)
+                            
+                            Button {
+                                id = ""
+                            } label: {
+                                Image(systemName: "xmark.circle.fill")
+                                    .foregroundColor(.gray)
+                            }
+                            .opacity(id.isEmpty ? 0 : 1)
+                            .disabled(id.isEmpty ? true : false)
+                        }
+                        .frame(width: 233, height: 34, alignment: .center)
+                        .padding(.horizontal, 10)
+                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 1))
+                        
+                        
+                        HStack {
+                            Image(systemName: "lock").foregroundColor(.gray)
+                            TextField("비밀번호를 입력해주세요", text: $password)
+                                .font(.subheadline)
+                            Button {
+                                password = ""
+                            } label: {
+                                Image(systemName: "xmark.circle.fill")
+                                    .foregroundColor(.gray)
+                            }
+                            .opacity(password.isEmpty ? 0 : 1)
+                            .disabled(password.isEmpty ? true : false)
+                        }
+                        .frame(width: 233, height: 34, alignment: .center)
+                        .padding(.horizontal, 10)
+                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 1))
+                    }
+                    
+                    HStack(spacing: 17) {
+                        Button {
+                            
+                        } label: {
+                            Text("로그인")
+                                .foregroundColor(.white)
+                                .fontWeight(.medium)
+                        }
+                        .frame(width: 118, height: 38, alignment: .center)
+                        .background(.blue)
+                        .cornerRadius(5)
+
+                        Button {
+                            
+                        } label: {
+                            Text("회원 가입")
+                                .foregroundColor(.gray)
+                                .fontWeight(.medium)
+                        }
+                        .frame(width: 118, height: 38, alignment: .center)
+                        .background(.white)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 5)
+                                .stroke(.gray, lineWidth: 1)
+                        )
+                    }
+                }
+                .frame(width: 300, height: 200, alignment: .center)
+                .background(.white)
+                .cornerRadius(15))
     }
 }
 

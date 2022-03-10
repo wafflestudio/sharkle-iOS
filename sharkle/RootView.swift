@@ -31,7 +31,7 @@ struct RootView: View {
                 }
                 .tag(Tab.search)
         }
-        .accentColor(.black)
+        .accentColor(Color("MainColor"))
     }
 }
 
