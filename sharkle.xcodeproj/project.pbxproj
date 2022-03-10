@@ -19,6 +19,11 @@
 		77D2A68C27D8BC3F00D3F787 /* ClubItemsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D2A68B27D8BC3F00D3F787 /* ClubItemsRow.swift */; };
 		77D2A68E27D8BFB000D3F787 /* ClubRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D2A68D27D8BFB000D3F787 /* ClubRow.swift */; };
 		77D2A69027D8C24700D3F787 /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D2A68F27D8C24700D3F787 /* CornerRadius.swift */; };
+		77D2A69227D8D42700D3F787 /* TopTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D2A69127D8D42700D3F787 /* TopTabBar.swift */; };
+		77D2A69427D9E99C00D3F787 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D2A69327D9E99C00D3F787 /* MyPageView.swift */; };
+		77D2A69627D9E9AB00D3F787 /* RecruitingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D2A69527D9E9AB00D3F787 /* RecruitingPageView.swift */; };
+		77D2A69827D9E9B600D3F787 /* TotalPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D2A69727D9E9B600D3F787 /* TotalPageView.swift */; };
+		77D2A69A27D9E9C300D3F787 /* CategoryPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D2A69927D9E9C200D3F787 /* CategoryPageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +40,11 @@
 		77D2A68B27D8BC3F00D3F787 /* ClubItemsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubItemsRow.swift; sourceTree = "<group>"; };
 		77D2A68D27D8BFB000D3F787 /* ClubRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubRow.swift; sourceTree = "<group>"; };
 		77D2A68F27D8C24700D3F787 /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
+		77D2A69127D8D42700D3F787 /* TopTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTabBar.swift; sourceTree = "<group>"; };
+		77D2A69327D9E99C00D3F787 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		77D2A69527D9E9AB00D3F787 /* RecruitingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitingPageView.swift; sourceTree = "<group>"; };
+		77D2A69727D9E9B600D3F787 /* TotalPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalPageView.swift; sourceTree = "<group>"; };
+		77D2A69927D9E9C200D3F787 /* CategoryPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,14 +81,19 @@
 				7716871227CB1B5B006949CA /* ContentView.swift */,
 				7716871427CB1B5C006949CA /* Assets.xcassets */,
 				7716871627CB1B5C006949CA /* Preview Content */,
+				7727AD0B27D5F9C600E3123E /* LoginView.swift */,
 				7727AD0527D5F73800E3123E /* RootView.swift */,
 				7727AD0727D5F7FA00E3123E /* HomeView.swift */,
-				7727AD0927D5F8B600E3123E /* SearchView.swift */,
-				7727AD0B27D5F9C600E3123E /* LoginView.swift */,
+				77D2A69327D9E99C00D3F787 /* MyPageView.swift */,
+				77D2A69527D9E9AB00D3F787 /* RecruitingPageView.swift */,
+				77D2A69727D9E9B600D3F787 /* TotalPageView.swift */,
+				77D2A69927D9E9C200D3F787 /* CategoryPageView.swift */,
+				77D2A69127D8D42700D3F787 /* TopTabBar.swift */,
 				77D2A68927D8563F00D3F787 /* ClubItem.swift */,
 				77D2A68B27D8BC3F00D3F787 /* ClubItemsRow.swift */,
 				77D2A68D27D8BFB000D3F787 /* ClubRow.swift */,
 				77D2A68F27D8C24700D3F787 /* CornerRadius.swift */,
+				7727AD0927D5F8B600E3123E /* SearchView.swift */,
 			);
 			path = sharkle;
 			sourceTree = "<group>";
@@ -163,11 +178,16 @@
 			files = (
 				7727AD0C27D5F9C600E3123E /* LoginView.swift in Sources */,
 				77D2A68E27D8BFB000D3F787 /* ClubRow.swift in Sources */,
+				77D2A69627D9E9AB00D3F787 /* RecruitingPageView.swift in Sources */,
 				77D2A69027D8C24700D3F787 /* CornerRadius.swift in Sources */,
 				7727AD0A27D5F8B600E3123E /* SearchView.swift in Sources */,
 				7716871327CB1B5B006949CA /* ContentView.swift in Sources */,
+				77D2A69427D9E99C00D3F787 /* MyPageView.swift in Sources */,
+				77D2A69A27D9E9C300D3F787 /* CategoryPageView.swift in Sources */,
+				77D2A69227D8D42700D3F787 /* TopTabBar.swift in Sources */,
 				7727AD0827D5F7FA00E3123E /* HomeView.swift in Sources */,
 				7716871127CB1B5B006949CA /* sharkleApp.swift in Sources */,
+				77D2A69827D9E9B600D3F787 /* TotalPageView.swift in Sources */,
 				77D2A68C27D8BC3F00D3F787 /* ClubItemsRow.swift in Sources */,
 				77D2A68A27D8564000D3F787 /* ClubItem.swift in Sources */,
 				7727AD0627D5F73800E3123E /* RootView.swift in Sources */,

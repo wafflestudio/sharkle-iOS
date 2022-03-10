@@ -11,7 +11,8 @@ struct ClubRow: View {
     var body: some View {
         VStack(spacing: 0) {
             Image(systemName: "")
-                .frame(width: 358, height: 156, alignment: .center)
+                .frame(minWidth: 0, maxWidth: .infinity)
+                .frame(height: 156, alignment: .center)
                 .background(Color("TagTextBackgroundColor"))
                 .cornerRadius(10, corners: [.topLeft, .topRight])
             
@@ -35,13 +36,15 @@ struct ClubRow: View {
                     .truncationMode(.tail)
                     .lineLimit(1)
                     .padding(.leading, 10)
-                }
-            .frame(width: 358, height: 60)
+            }
+            .frame(minWidth: 0, maxWidth: .infinity)
+            .frame(height: 60)
             .background(.white)
             .cornerRadius(10, corners: [.bottomLeft, .bottomRight])
         }
-        .frame(width: 358, height: 216, alignment: .bottom)
-        .shadow(color: .gray, radius: 5, x: 0, y: 1)
+        .frame(height: 216, alignment: .bottom)
+        .padding(.horizontal, 15)
+        .shadow(color: .gray.opacity(0.2), radius: 5, x: 0, y: 0)
     }
 }
 
