@@ -61,7 +61,7 @@
 		7716870427CB1B5B006949CA = {
 			isa = PBXGroup;
 			children = (
-				7716870F27CB1B5B006949CA /* sharkle */,
+				7716870F27CB1B5B006949CA /* Sharkle */,
 				7716870E27CB1B5B006949CA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,12 +69,12 @@
 		7716870E27CB1B5B006949CA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7716870D27CB1B5B006949CA /* sharkle.app */,
+				7716870D27CB1B5B006949CA /* Sharkle.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7716870F27CB1B5B006949CA /* sharkle */ = {
+		7716870F27CB1B5B006949CA /* Sharkle */ = {
 			isa = PBXGroup;
 			children = (
 				7716871027CB1B5B006949CA /* sharkleApp.swift */,
@@ -95,7 +95,7 @@
 				77D2A68F27D8C24700D3F787 /* CornerRadius.swift */,
 				7727AD0927D5F8B600E3123E /* SearchView.swift */,
 			);
-			path = sharkle;
+			path = Sharkle;
 			sourceTree = "<group>";
 		};
 		7716871627CB1B5C006949CA /* Preview Content */ = {
@@ -109,9 +109,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7716870C27CB1B5B006949CA /* sharkle */ = {
+		7716870C27CB1B5B006949CA /* Sharkle */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7716871B27CB1B5C006949CA /* Build configuration list for PBXNativeTarget "sharkle" */;
+			buildConfigurationList = 7716871B27CB1B5C006949CA /* Build configuration list for PBXNativeTarget "Sharkle" */;
 			buildPhases = (
 				7716870927CB1B5B006949CA /* Sources */,
 				7716870A27CB1B5B006949CA /* Frameworks */,
@@ -121,9 +121,9 @@
 			);
 			dependencies = (
 			);
-			name = sharkle;
+			name = Sharkle;
 			productName = sharkle;
-			productReference = 7716870D27CB1B5B006949CA /* sharkle.app */;
+			productReference = 7716870D27CB1B5B006949CA /* Sharkle.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -154,7 +154,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7716870C27CB1B5B006949CA /* sharkle */,
+				7716870C27CB1B5B006949CA /* Sharkle */,
 			);
 		};
 /* End PBXProject section */
@@ -335,7 +335,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = KWSMooBang.sharkle;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Sharkle;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -364,7 +364,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = KWSMooBang.sharkle;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Sharkle;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -383,7 +383,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7716871B27CB1B5C006949CA /* Build configuration list for PBXNativeTarget "sharkle" */ = {
+		7716871B27CB1B5C006949CA /* Build configuration list for PBXNativeTarget "Sharkle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7716871C27CB1B5C006949CA /* Debug */,

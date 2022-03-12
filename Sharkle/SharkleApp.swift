@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct sharkleApp: App {
+struct SharkleApp: App {
     var body: some Scene {
         WindowGroup {
             RootView()
