@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
+    @Binding var isLoggedIn: Bool
     @State private var id: String = ""
     @State private var password: String = ""
     
@@ -66,7 +67,7 @@ struct LoginView: View {
                     
                     HStack(spacing: 17) {
                         Button {
-                            
+                            isLoggedIn = true
                         } label: {
                             Text("로그인")
                                 .foregroundColor(.white)
@@ -99,6 +100,9 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        Group {
+            LoginView(isLoggedIn: .constant(false))
+                .previewInterfaceOrientation(.portrait)
+        }
     }
 }

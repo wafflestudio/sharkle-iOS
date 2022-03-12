@@ -8,30 +8,14 @@
 import SwiftUI
 
 struct RootView: View {
-    @State private var selectedView: Tab = .home
-    
-    enum Tab {
-        case home
-        case search
-        case profile
-        case setting
-    }
-    
+    @State var isLoggedIn: Bool = false
+
     var body: some View {
-        TabView(selection: $selectedView) {
-            HomeView()
-                .tabItem {
-                    Image(systemName: "house")
-                }
-                .tag(Tab.home)
-            
-            SearchView()
-                .tabItem {
-                    Image(systemName: "magnifyingglass")
-                }
-                .tag(Tab.search)
+        if !isLoggedIn {
+            LoginView(isLoggedIn: $isLoggedIn)
+        } else {
+            MainContentView()
         }
-        .accentColor(Color("MainColor"))
     }
 }
 
