@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/kim-woosung/Documents/Project/iOS/Projects/sharkle/Sharkle.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>
