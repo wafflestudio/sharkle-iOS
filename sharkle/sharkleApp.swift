@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct SharkleApp: App {
+struct sharkleApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
