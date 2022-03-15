@@ -21,12 +21,6 @@ struct HomeView: View {
                 switch selected {
                 case 0:
                     MyPageView()
-                case 1:
-                    RecruitingPageView()
-                case 2:
-                    TotalPageView()
-                case 3:
-                    CategoryPageView()
                 default:
                     MyPageView()
                 }
