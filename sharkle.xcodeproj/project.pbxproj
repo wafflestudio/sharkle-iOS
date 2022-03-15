@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7716871127CB1B5B006949CA /* sharkleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7716871027CB1B5B006949CA /* sharkleApp.swift */; };
+		7716871127CB1B5B006949CA /* SharkleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7716871027CB1B5B006949CA /* SharkleApp.swift */; };
 		7716871527CB1B5C006949CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7716871427CB1B5C006949CA /* Assets.xcassets */; };
 		7716871827CB1B5C006949CA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7716871727CB1B5C006949CA /* Preview Assets.xcassets */; };
 		7727AD0627D5F73800E3123E /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7727AD0527D5F73800E3123E /* RootView.swift */; };
@@ -27,8 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7716870D27CB1B5B006949CA /* sharkle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sharkle.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7716871027CB1B5B006949CA /* sharkleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sharkleApp.swift; sourceTree = "<group>"; };
+		7716870D27CB1B5B006949CA /* sharkle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = sharkle.app; path = Sharkle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7716871027CB1B5B006949CA /* SharkleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharkleApp.swift; sourceTree = "<group>"; };
 		7716871427CB1B5C006949CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7716871727CB1B5C006949CA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7727AD0527D5F73800E3123E /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 		7716870E27CB1B5B006949CA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7716870D27CB1B5B006949CA /* Sharkle.app */,
+				7716870D27CB1B5B006949CA /* sharkle.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,7 +77,7 @@
 		7716870F27CB1B5B006949CA /* Sharkle */ = {
 			isa = PBXGroup;
 			children = (
-				7716871027CB1B5B006949CA /* sharkleApp.swift */,
+				7716871027CB1B5B006949CA /* SharkleApp.swift */,
 				7727AD0527D5F73800E3123E /* RootView.swift */,
 				7716871427CB1B5C006949CA /* Assets.xcassets */,
 				7716871627CB1B5C006949CA /* Preview Content */,
@@ -123,7 +123,7 @@
 			);
 			name = Sharkle;
 			productName = sharkle;
-			productReference = 7716870D27CB1B5B006949CA /* Sharkle.app */;
+			productReference = 7716870D27CB1B5B006949CA /* sharkle.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -185,7 +185,7 @@
 				77D2A69A27D9E9C300D3F787 /* CategoryPageView.swift in Sources */,
 				77D2A69227D8D42700D3F787 /* TopTabBar.swift in Sources */,
 				7727AD0827D5F7FA00E3123E /* HomeView.swift in Sources */,
-				7716871127CB1B5B006949CA /* sharkleApp.swift in Sources */,
+				7716871127CB1B5B006949CA /* SharkleApp.swift in Sources */,
 				77D2A69C27DC7FBF00D3F787 /* MainContentView.swift in Sources */,
 				77D2A69827D9E9B600D3F787 /* TotalPageView.swift in Sources */,
 				77D2A68C27D8BC3F00D3F787 /* ClubItemsRow.swift in Sources */,
