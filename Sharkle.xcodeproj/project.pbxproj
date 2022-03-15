@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58D933940A2C21040A3FF426 /* Pods_Sharkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD63A9080F85F4FD37384A7 /* Pods_Sharkle.framework */; };
 		7716871127CB1B5B006949CA /* SharkleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7716871027CB1B5B006949CA /* SharkleApp.swift */; };
 		7716871327CB1B5B006949CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7716871227CB1B5B006949CA /* ContentView.swift */; };
 		7716871527CB1B5C006949CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7716871427CB1B5C006949CA /* Assets.xcassets */; };
 		7716871827CB1B5C006949CA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7716871727CB1B5C006949CA /* Preview Assets.xcassets */; };
+		77D2A6A727DF382100D3F787 /* AuthenticationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D2A6A627DF382100D3F787 /* AuthenticationAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5BD63A9080F85F4FD37384A7 /* Pods_Sharkle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sharkle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7716870D27CB1B5B006949CA /* Sharkle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sharkle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7716871027CB1B5B006949CA /* SharkleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharkleApp.swift; sourceTree = "<group>"; };
 		7716871227CB1B5B006949CA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7716871427CB1B5C006949CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7716871727CB1B5C006949CA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		77D2A6A627DF382100D3F787 /* AuthenticationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthenticationAPI.swift; path = sharkle/Network/AuthenticationAPI.swift; sourceTree = SOURCE_ROOT; };
+		8905D5532CB633486F3DCBB1 /* Pods-Sharkle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sharkle.release.xcconfig"; path = "Target Support Files/Pods-Sharkle/Pods-Sharkle.release.xcconfig"; sourceTree = "<group>"; };
+		FA2C1C0C76469C87C93564B6 /* Pods-Sharkle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sharkle.debug.xcconfig"; path = "Target Support Files/Pods-Sharkle/Pods-Sharkle.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58D933940A2C21040A3FF426 /* Pods_Sharkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +44,8 @@
 			children = (
 				7716870F27CB1B5B006949CA /* Sharkle */,
 				7716870E27CB1B5B006949CA /* Products */,
+				F400B322EF6B212205664078 /* Pods */,
+				7C43449E6FD693795264979D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,6 +64,7 @@
 				7716871227CB1B5B006949CA /* ContentView.swift */,
 				7716871427CB1B5C006949CA /* Assets.xcassets */,
 				7716871627CB1B5C006949CA /* Preview Content */,
+				77D2A6A527DF377800D3F787 /* Network */,
 			);
 			path = Sharkle;
 			sourceTree = "<group>";
@@ -67,6 +77,31 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		77D2A6A527DF377800D3F787 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				77D2A6A627DF382100D3F787 /* AuthenticationAPI.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		7C43449E6FD693795264979D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BD63A9080F85F4FD37384A7 /* Pods_Sharkle.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F400B322EF6B212205664078 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FA2C1C0C76469C87C93564B6 /* Pods-Sharkle.debug.xcconfig */,
+				8905D5532CB633486F3DCBB1 /* Pods-Sharkle.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +109,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7716871B27CB1B5C006949CA /* Build configuration list for PBXNativeTarget "Sharkle" */;
 			buildPhases = (
+				F177335BF56B8BB899CEAF74 /* [CP] Check Pods Manifest.lock */,
 				7716870927CB1B5B006949CA /* Sources */,
 				7716870A27CB1B5B006949CA /* Frameworks */,
 				7716870B27CB1B5B006949CA /* Resources */,
+				28BB4531A33F68F3841972D1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +169,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		28BB4531A33F68F3841972D1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sharkle/Pods-Sharkle-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sharkle/Pods-Sharkle-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sharkle/Pods-Sharkle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F177335BF56B8BB899CEAF74 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sharkle-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7716870927CB1B5B006949CA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -139,6 +218,7 @@
 			files = (
 				7716871327CB1B5B006949CA /* ContentView.swift in Sources */,
 				7716871127CB1B5B006949CA /* SharkleApp.swift in Sources */,
+				77D2A6A727DF382100D3F787 /* AuthenticationAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +343,7 @@
 		};
 		7716871C27CB1B5C006949CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA2C1C0C76469C87C93564B6 /* Pods-Sharkle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -292,6 +373,7 @@
 		};
 		7716871D27CB1B5C006949CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8905D5532CB633486F3DCBB1 /* Pods-Sharkle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
