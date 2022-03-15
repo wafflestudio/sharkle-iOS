@@ -13,6 +13,15 @@
 		7716871527CB1B5C006949CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7716871427CB1B5C006949CA /* Assets.xcassets */; };
 		7716871827CB1B5C006949CA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7716871727CB1B5C006949CA /* Preview Assets.xcassets */; };
 		77725CE427E08E1D006972A1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77725CE327E08E1D006972A1 /* LoginView.swift */; };
+		77725CE627E08E89006972A1 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77725CE527E08E89006972A1 /* RootView.swift */; };
+		77725CE827E08EAE006972A1 /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77725CE727E08EAE006972A1 /* MainContentView.swift */; };
+		77725CEA27E08EFB006972A1 /* ClubItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77725CE927E08EFB006972A1 /* ClubItem.swift */; };
+		77725CEC27E08F1C006972A1 /* ClubItemsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77725CEB27E08F1C006972A1 /* ClubItemsRow.swift */; };
+		77725CEE27E08F32006972A1 /* ClubRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77725CED27E08F32006972A1 /* ClubRow.swift */; };
+		77725CF027E08F60006972A1 /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77725CEF27E08F60006972A1 /* CornerRadius.swift */; };
+		77725CF227E08F99006972A1 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77725CF127E08F99006972A1 /* MyPageView.swift */; };
+		77725CF427E08FB4006972A1 /* TopTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77725CF327E08FB4006972A1 /* TopTabBar.swift */; };
+		77725CF627E08FE2006972A1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77725CF527E08FE2006972A1 /* HomeView.swift */; };
 		77D2A6A727DF382100D3F787 /* AuthenticationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D2A6A627DF382100D3F787 /* AuthenticationAPI.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +33,15 @@
 		7716871427CB1B5C006949CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7716871727CB1B5C006949CA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		77725CE327E08E1D006972A1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		77725CE527E08E89006972A1 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		77725CE727E08EAE006972A1 /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
+		77725CE927E08EFB006972A1 /* ClubItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubItem.swift; sourceTree = "<group>"; };
+		77725CEB27E08F1C006972A1 /* ClubItemsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubItemsRow.swift; sourceTree = "<group>"; };
+		77725CED27E08F32006972A1 /* ClubRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubRow.swift; sourceTree = "<group>"; };
+		77725CEF27E08F60006972A1 /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
+		77725CF127E08F99006972A1 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		77725CF327E08FB4006972A1 /* TopTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTabBar.swift; sourceTree = "<group>"; };
+		77725CF527E08FE2006972A1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		77D2A6A627DF382100D3F787 /* AuthenticationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthenticationAPI.swift; path = sharkle/Network/AuthenticationAPI.swift; sourceTree = SOURCE_ROOT; };
 		8905D5532CB633486F3DCBB1 /* Pods-Sharkle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sharkle.release.xcconfig"; path = "Target Support Files/Pods-Sharkle/Pods-Sharkle.release.xcconfig"; sourceTree = "<group>"; };
 		FA2C1C0C76469C87C93564B6 /* Pods-Sharkle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sharkle.debug.xcconfig"; path = "Target Support Files/Pods-Sharkle/Pods-Sharkle.debug.xcconfig"; sourceTree = "<group>"; };
@@ -67,7 +85,16 @@
 				7716871427CB1B5C006949CA /* Assets.xcassets */,
 				7716871627CB1B5C006949CA /* Preview Content */,
 				77D2A6A527DF377800D3F787 /* Network */,
+				77725CE527E08E89006972A1 /* RootView.swift */,
 				77725CE327E08E1D006972A1 /* LoginView.swift */,
+				77725CE727E08EAE006972A1 /* MainContentView.swift */,
+				77725CF527E08FE2006972A1 /* HomeView.swift */,
+				77725CF327E08FB4006972A1 /* TopTabBar.swift */,
+				77725CF127E08F99006972A1 /* MyPageView.swift */,
+				77725CE927E08EFB006972A1 /* ClubItem.swift */,
+				77725CEB27E08F1C006972A1 /* ClubItemsRow.swift */,
+				77725CED27E08F32006972A1 /* ClubRow.swift */,
+				77725CEF27E08F60006972A1 /* CornerRadius.swift */,
 			);
 			path = Sharkle;
 			sourceTree = "<group>";
@@ -220,9 +247,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				7716871327CB1B5B006949CA /* ContentView.swift in Sources */,
+				77725CEE27E08F32006972A1 /* ClubRow.swift in Sources */,
+				77725CF627E08FE2006972A1 /* HomeView.swift in Sources */,
+				77725CF027E08F60006972A1 /* CornerRadius.swift in Sources */,
 				7716871127CB1B5B006949CA /* SharkleApp.swift in Sources */,
 				77725CE427E08E1D006972A1 /* LoginView.swift in Sources */,
+				77725CF427E08FB4006972A1 /* TopTabBar.swift in Sources */,
 				77D2A6A727DF382100D3F787 /* AuthenticationAPI.swift in Sources */,
+				77725CF227E08F99006972A1 /* MyPageView.swift in Sources */,
+				77725CE627E08E89006972A1 /* RootView.swift in Sources */,
+				77725CEC27E08F1C006972A1 /* ClubItemsRow.swift in Sources */,
+				77725CEA27E08EFB006972A1 /* ClubItem.swift in Sources */,
+				77725CE827E08EAE006972A1 /* MainContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
