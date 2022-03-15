@@ -12,6 +12,7 @@
 		7716871327CB1B5B006949CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7716871227CB1B5B006949CA /* ContentView.swift */; };
 		7716871527CB1B5C006949CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7716871427CB1B5C006949CA /* Assets.xcassets */; };
 		7716871827CB1B5C006949CA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7716871727CB1B5C006949CA /* Preview Assets.xcassets */; };
+		77D2A6A727DF382100D3F787 /* AuthenticationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D2A6A627DF382100D3F787 /* AuthenticationAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		7716871227CB1B5B006949CA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7716871427CB1B5C006949CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7716871727CB1B5C006949CA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		77D2A6A627DF382100D3F787 /* AuthenticationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthenticationAPI.swift; path = sharkle/Network/AuthenticationAPI.swift; sourceTree = SOURCE_ROOT; };
 		8905D5532CB633486F3DCBB1 /* Pods-Sharkle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sharkle.release.xcconfig"; path = "Target Support Files/Pods-Sharkle/Pods-Sharkle.release.xcconfig"; sourceTree = "<group>"; };
 		FA2C1C0C76469C87C93564B6 /* Pods-Sharkle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sharkle.debug.xcconfig"; path = "Target Support Files/Pods-Sharkle/Pods-Sharkle.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,6 +64,7 @@
 				7716871227CB1B5B006949CA /* ContentView.swift */,
 				7716871427CB1B5C006949CA /* Assets.xcassets */,
 				7716871627CB1B5C006949CA /* Preview Content */,
+				77D2A6A527DF377800D3F787 /* Network */,
 			);
 			path = Sharkle;
 			sourceTree = "<group>";
@@ -72,6 +75,14 @@
 				7716871727CB1B5C006949CA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		77D2A6A527DF377800D3F787 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				77D2A6A627DF382100D3F787 /* AuthenticationAPI.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		7C43449E6FD693795264979D /* Frameworks */ = {
@@ -88,7 +99,6 @@
 				FA2C1C0C76469C87C93564B6 /* Pods-Sharkle.debug.xcconfig */,
 				8905D5532CB633486F3DCBB1 /* Pods-Sharkle.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,6 +218,7 @@
 			files = (
 				7716871327CB1B5B006949CA /* ContentView.swift in Sources */,
 				7716871127CB1B5B006949CA /* SharkleApp.swift in Sources */,
+				77D2A6A727DF382100D3F787 /* AuthenticationAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

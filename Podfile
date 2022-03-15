@@ -6,6 +6,6 @@ target 'Sharkle' do
   use_frameworks!
 
   # Pods for Sharkle
-  pod 'Moya'
+  pod 'Moya/Combine'
 
 end
