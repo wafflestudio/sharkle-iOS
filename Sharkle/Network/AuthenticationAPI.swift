@@ -40,7 +40,7 @@ extension AuthenitcationAPI: TargetType {
         switch self {
         case let .login(email, password):
             return .requestJSONEncodable(["email": email, "password": password])
-        case let .signup(email, user_id, password, username):
+        case let .signup(email, userId, password, username):
             return .requestJSONEncodable(["email": email, "user_id": userId,"password": password, "username": username])
         }
     }
