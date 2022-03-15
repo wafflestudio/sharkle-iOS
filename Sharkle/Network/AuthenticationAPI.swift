@@ -10,7 +10,7 @@ import Moya
 
 enum AuthenitcationAPI {
     case login(email: String, password: String)
-    case signup(email: String, user_id: String, password: String, username: String)
+    case signup(email: String, userId: String, password: String, username: String)
 }
 
 extension AuthenitcationAPI: TargetType {
@@ -41,7 +41,7 @@ extension AuthenitcationAPI: TargetType {
         case let .login(email, password):
             return .requestJSONEncodable(["email": email, "password": password])
         case let .signup(email, user_id, password, username):
-            return .requestJSONEncodable(["email": email, "user_id": user_id,"password": password, "username": username])
+            return .requestJSONEncodable(["email": email, "user_id": userId,"password": password, "username": username])
         }
     }
     
