@@ -11,6 +11,8 @@
 		7716871127CB1B5B006949CA /* SharkleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7716871027CB1B5B006949CA /* SharkleApp.swift */; };
 		7716871527CB1B5C006949CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7716871427CB1B5C006949CA /* Assets.xcassets */; };
 		7716871827CB1B5C006949CA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7716871727CB1B5C006949CA /* Preview Assets.xcassets */; };
+		774605B027E0E10E00AC29C2 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774605AF27E0E10E00AC29C2 /* SignUpView.swift */; };
+		774605B227E0E4A600AC29C2 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774605B127E0E4A600AC29C2 /* SignUpViewModel.swift */; };
 		77725CE427E08E1D006972A1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77725CE327E08E1D006972A1 /* LoginView.swift */; };
 		77725CE627E08E89006972A1 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77725CE527E08E89006972A1 /* RootView.swift */; };
 		77725CE827E08EAE006972A1 /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77725CE727E08EAE006972A1 /* MainContentView.swift */; };
@@ -43,6 +45,8 @@
 		7716871027CB1B5B006949CA /* SharkleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharkleApp.swift; sourceTree = "<group>"; };
 		7716871427CB1B5C006949CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7716871727CB1B5C006949CA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		774605AF27E0E10E00AC29C2 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		774605B127E0E4A600AC29C2 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		77725CE327E08E1D006972A1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		77725CE527E08E89006972A1 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		77725CE727E08EAE006972A1 /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 				77725CE527E08E89006972A1 /* RootView.swift */,
 				77725CE327E08E1D006972A1 /* LoginView.swift */,
 				77725CF927E09305006972A1 /* LoginViewModel.swift */,
+				774605AF27E0E10E00AC29C2 /* SignUpView.swift */,
+				774605B127E0E4A600AC29C2 /* SignUpViewModel.swift */,
 				77725CE727E08EAE006972A1 /* MainContentView.swift */,
 				77725CF527E08FE2006972A1 /* HomeView.swift */,
 				77725CF327E08FB4006972A1 /* TopTabBar.swift */,
@@ -310,6 +316,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				77725CEE27E08F32006972A1 /* ClubRow.swift in Sources */,
+				774605B027E0E10E00AC29C2 /* SignUpView.swift in Sources */,
+				774605B227E0E4A600AC29C2 /* SignUpViewModel.swift in Sources */,
 				77725CF627E08FE2006972A1 /* HomeView.swift in Sources */,
 				77725CF027E08F60006972A1 /* CornerRadius.swift in Sources */,
 				7716871127CB1B5B006949CA /* SharkleApp.swift in Sources */,

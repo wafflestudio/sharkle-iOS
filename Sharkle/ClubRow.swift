@@ -13,7 +13,7 @@ struct ClubRow: View {
             Image(systemName: "")
                 .frame(minWidth: 0, maxWidth: .infinity)
                 .frame(height: 156, alignment: .center)
-                .background(Color("TagTextBackgroundColor"))
+                .background(Color("DarkGray"))
                 .cornerRadius(10, corners: [.topLeft, .topRight])
             
             VStack(alignment: .leading, spacing: 5) {
@@ -44,7 +44,7 @@ struct ClubRow: View {
         }
         .frame(height: 216, alignment: .bottom)
         .padding(.horizontal, 15)
-        .shadow(color: .gray.opacity(0.2), radius: 5, x: 0, y: 0)
+        .shadow(color: Color("DarkGray"), radius: 10, x: 0, y: 0)
     }
 }
 
