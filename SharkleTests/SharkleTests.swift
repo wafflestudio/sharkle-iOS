@@ -7,6 +7,7 @@
 
 import XCTest
 
+
 class SharkleTests: XCTestCase {
 
     override func setUpWithError() throws {

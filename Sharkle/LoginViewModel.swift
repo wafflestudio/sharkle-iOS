@@ -11,10 +11,15 @@ import Combine
 final class LoginViewModel: ObservableObject {
     @Published var email: String = ""
     @Published var password: String = ""
-    
     private var cancellableBag = Set<AnyCancellable>()
     
     func login() {
-        
+        AuthenticationAPI.login(email: email, password: password)
+            .sink(receiveCompletion: { completion in
+                print(completion)
+            }, receiveValue: { response in 
+                print(response)
+            })
+            .store(in: &cancellableBag)
     }
 }

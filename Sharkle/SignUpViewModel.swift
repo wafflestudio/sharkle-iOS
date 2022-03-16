@@ -14,16 +14,17 @@ final class SignUpViewModel: ObservableObject {
     @Published var userId: String = ""
     @Published var password: String = ""
     @Published var username: String = ""
-    private let provider = MoyaProvider<AuthenitcationAPI>()
+    
     private var cancellableBag = Set<AnyCancellable>()
     
-    func signUp() {
+    func signup() {
         print(email, userId, password, username)
-        provider.requestPublisher(.signup(email: email, userId: userId, password: password, username: username))
+        AuthenticationAPI.signup(email: email, userId: userId, password: password, username: username)
             .sink(receiveCompletion: { completion in
-                print("completion : \(completion)")
-            }, receiveValue: { message in
-                print("message: \(message)")
-            }).store(in: &cancellableBag)
+                print(completion)
+            }, receiveValue: { response in
+                print(response)
+            })
+            .store(in: &cancellableBag)
     }
 }

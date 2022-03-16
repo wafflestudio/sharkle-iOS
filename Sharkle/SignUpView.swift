@@ -37,7 +37,7 @@ struct SignUpView: View {
             }
             
             Button(action: {
-                viewModel.signUp()
+                viewModel.signup()
             }, label: {
                 Text("회원가입")
             })
