@@ -23,7 +23,7 @@ final class SignUpViewModel: ObservableObject {
             .sink(receiveCompletion: { completion in
                 print(completion)
             }, receiveValue: { response in
-                print(response)
+                print(response.data)
             })
             .store(in: &cancellableBag)
     }

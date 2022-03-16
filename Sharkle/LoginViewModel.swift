@@ -16,9 +16,13 @@ final class LoginViewModel: ObservableObject {
     func login() {
         AuthenticationAPI.login(email: email, password: password)
             .sink(receiveCompletion: { completion in
-                print(completion)
+                guard case let .failure(error) = completion else { return }
+                print(error)
             }, receiveValue: { response in 
-                print(response)
+                guard let data = try? response.map(LoginResponse.self) else {
+                    return
+                }
+                Acc
             })
             .store(in: &cancellableBag)
     }

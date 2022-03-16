@@ -33,7 +33,7 @@ extension AuthenitcationService: TargetType {
         }
     }
     
-    var method: Method {
+    var method: Moya.Method {
         return .post
     }
     
