@@ -14,7 +14,7 @@ final class LoginViewModel: ObservableObject {
     private var cancellableBag = Set<AnyCancellable>()
     
     func login() {
-        AuthenticationAPI.login(email: email, password: password)
+        AuthAPI.login(email: email, password: password)
             .sink(receiveCompletion: { completion in
                 guard case let .failure(error) = completion else { return }
                 print(error)
@@ -22,7 +22,10 @@ final class LoginViewModel: ObservableObject {
                 guard let data = try? response.map(LoginResponse.self) else {
                     return
                 }
-                Acc
+                
+                guard let refreshToken = data.refresh else {
+                    return
+                }
             })
             .store(in: &cancellableBag)
     }

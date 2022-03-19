@@ -8,14 +8,14 @@ import Foundation
 import Combine
 import Moya
 
-enum AuthenitcationService {
+enum AuthService {
     case login(email: String, password: String)
     case signup(email: String, userId: String, password: String, username: String)
     case refresh(refresh: String)
     case verify(token: String)
 }
 
-extension AuthenitcationService: TargetType {
+extension AuthService: TargetType {
     var baseURL: URL {
         return URL(string: "http://sharkle-server.kro.kr/api/v1")!
     }
@@ -60,8 +60,8 @@ struct LoginResponse: Codable {
     var access: String
 }
 
-struct AuthenticationAPI {
-    private static var provider = MoyaProvider<AuthenitcationService>()
+struct AuthAPI {
+    private static var provider = MoyaProvider<AuthService>()
     
     static func login(email: String, password: String) -> AnyPublisher<Response, MoyaError> {
         return provider.requestPublisher(.login(email: email, password: password))

@@ -26,8 +26,9 @@
 		77725CF827E0909C006972A1 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77725CF727E0909C006972A1 /* SearchView.swift */; };
 		77725CFA27E09305006972A1 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77725CF927E09305006972A1 /* LoginViewModel.swift */; };
 		77725D0227E09EF9006972A1 /* SharkleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77725D0127E09EF9006972A1 /* SharkleTests.swift */; };
+		77AC122827E59B3D006265F9 /* AuthPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC122727E59B3D006265F9 /* AuthPlugin.swift */; };
 		77B5504D27E2127000EDF2E6 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B5504C27E2127000EDF2E6 /* AccountManager.swift */; };
-		77D2A6A727DF382100D3F787 /* AuthenticationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D2A6A627DF382100D3F787 /* AuthenticationAPI.swift */; };
+		77D2A6A727DF382100D3F787 /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D2A6A627DF382100D3F787 /* AuthAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,9 +63,10 @@
 		77725CF927E09305006972A1 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		77725CFF27E09EF9006972A1 /* SharkleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharkleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77725D0127E09EF9006972A1 /* SharkleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharkleTests.swift; sourceTree = "<group>"; };
+		77AC122727E59B3D006265F9 /* AuthPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPlugin.swift; sourceTree = "<group>"; };
 		77B5504B27E2081000EDF2E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		77B5504C27E2127000EDF2E6 /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
-		77D2A6A627DF382100D3F787 /* AuthenticationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthenticationAPI.swift; path = sharkle/Network/AuthenticationAPI.swift; sourceTree = SOURCE_ROOT; };
+		77D2A6A627DF382100D3F787 /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthAPI.swift; path = sharkle/Network/AuthAPI.swift; sourceTree = SOURCE_ROOT; };
 		8905D5532CB633486F3DCBB1 /* Pods-Sharkle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sharkle.release.xcconfig"; path = "Target Support Files/Pods-Sharkle/Pods-Sharkle.release.xcconfig"; sourceTree = "<group>"; };
 		FA2C1C0C76469C87C93564B6 /* Pods-Sharkle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sharkle.debug.xcconfig"; path = "Target Support Files/Pods-Sharkle/Pods-Sharkle.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,7 +156,8 @@
 		77D2A6A527DF377800D3F787 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				77D2A6A627DF382100D3F787 /* AuthenticationAPI.swift */,
+				77D2A6A627DF382100D3F787 /* AuthAPI.swift */,
+				77AC122727E59B3D006265F9 /* AuthPlugin.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 			files = (
 				77725CEE27E08F32006972A1 /* ClubRow.swift in Sources */,
 				774605B027E0E10E00AC29C2 /* SignUpView.swift in Sources */,
+				77AC122827E59B3D006265F9 /* AuthPlugin.swift in Sources */,
 				774605B227E0E4A600AC29C2 /* SignUpViewModel.swift in Sources */,
 				77725CF627E08FE2006972A1 /* HomeView.swift in Sources */,
 				77725CF027E08F60006972A1 /* CornerRadius.swift in Sources */,
@@ -329,7 +333,7 @@
 				77725CE427E08E1D006972A1 /* LoginView.swift in Sources */,
 				77725CF427E08FB4006972A1 /* TopTabBar.swift in Sources */,
 				77725CFA27E09305006972A1 /* LoginViewModel.swift in Sources */,
-				77D2A6A727DF382100D3F787 /* AuthenticationAPI.swift in Sources */,
+				77D2A6A727DF382100D3F787 /* AuthAPI.swift in Sources */,
 				77725CF227E08F99006972A1 /* MyPageView.swift in Sources */,
 				77725CE627E08E89006972A1 /* RootView.swift in Sources */,
 				77725CF827E0909C006972A1 /* SearchView.swift in Sources */,

@@ -19,7 +19,7 @@ final class SignUpViewModel: ObservableObject {
     
     func signup() {
         print(email, userId, password, username)
-        AuthenticationAPI.signup(email: email, userId: userId, password: password, username: username)
+        AuthAPI.signup(email: email, userId: userId, password: password, username: username)
             .sink(receiveCompletion: { completion in
                 print(completion)
             }, receiveValue: { response in
