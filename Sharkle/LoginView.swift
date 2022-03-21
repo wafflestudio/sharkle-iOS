@@ -67,6 +67,7 @@ struct LoginView: View {
                     HStack(spacing: 17) {
                         Button {
                             viewModel.login()
+                            print(AccountManager.isLoggedIn)
                         } label: {
                             Text("로그인")
                                 .foregroundColor(.white)

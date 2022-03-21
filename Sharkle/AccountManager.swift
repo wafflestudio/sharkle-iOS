@@ -6,9 +6,9 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct AccountManager {
-    
     static var refreshToken: String? {
         get {
             return UserDefaults.standard.value(forKey: "RefreshToken") as? String

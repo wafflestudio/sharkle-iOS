@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 import Combine
 
 final class LoginViewModel: ObservableObject {
@@ -23,9 +24,7 @@ final class LoginViewModel: ObservableObject {
                     return
                 }
                 
-                guard let refreshToken = data.refresh else {
-                    return
-                }
+                AccountManager.isLoggedIn = true
             })
             .store(in: &cancellableBag)
     }
