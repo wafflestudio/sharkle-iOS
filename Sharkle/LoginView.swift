@@ -31,13 +31,15 @@ struct LoginView: View {
                             Image(systemName: "person").foregroundColor(.gray)
                             TextField("이메일를 입력해주세요", text: $viewModel.email)
                                 .font(.subheadline)
+                                .autocapitalization(.none)
                             
-                            Button {
+                            Button(action: {
                                 viewModel.email = ""
-                            } label: {
-                                Image(systemName: "xmark.circle.fill")
+                            }, label: {
+                                Image(systemName: "xmark.circle")
                                     .foregroundColor(.gray)
-                            }
+                                    .font(.system(size: 10.5))
+                            })
                             .opacity(viewModel.email.isEmpty ? 0 : 1)
                             .disabled(viewModel.email.isEmpty ? true : false)
                         }
@@ -48,14 +50,16 @@ struct LoginView: View {
                         
                         HStack {
                             Image(systemName: "lock").foregroundColor(.gray)
-                            TextField("비밀번호를 입력해주세요", text: $viewModel.password)
+                            SecureField("비밀번호를 입력해주세요", text: $viewModel.password)
                                 .font(.subheadline)
-                            Button {
+                                .autocapitalization(.none)
+                            Button(action: {
                                 viewModel.password = ""
-                            } label: {
-                                Image(systemName: "xmark.circle.fill")
+                            }, label: {
+                                Image(systemName: "xmark.circle")
                                     .foregroundColor(.gray)
-                            }
+                                    .font(.system(size: 10.5))
+                            })
                             .opacity(viewModel.password.isEmpty ? 0 : 1)
                             .disabled(viewModel.password.isEmpty ? true : false)
                         }
@@ -66,6 +70,7 @@ struct LoginView: View {
                     
                     HStack(spacing: 17) {
                         Button {
+                            print("Login Button Click!")
                             viewModel.login()
                             print(AccountManager.isLoggedIn)
                         } label: {
@@ -74,8 +79,10 @@ struct LoginView: View {
                                 .fontWeight(.medium)
                         }
                         .frame(width: 118, height: 38, alignment: .center)
-                        .background(.blue)
-                        .cornerRadius(5)
+                        .background((viewModel.email == "" || viewModel.password == "") ?  Color.gray : Color("LightBlue"))
+                        .cornerRadius(10)
+                        .disabled(viewModel.email == "" || viewModel.password == "")
+                        
 
                         NavigationLink(destination: {
                             SignUpView()
@@ -86,7 +93,7 @@ struct LoginView: View {
                                 .frame(width: 118, height: 38, alignment: .center)
                                 .background(.white)
                                 .overlay(
-                                    RoundedRectangle(cornerRadius: 5)
+                                    RoundedRectangle(cornerRadius: 10)
                                         .stroke(.gray, lineWidth: 1)
                                 )
                         })
