@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		58D933940A2C21040A3FF426 /* Pods_Sharkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD63A9080F85F4FD37384A7 /* Pods_Sharkle.framework */; };
+		770DC64027EB355D00E152A0 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770DC63F27EB355D00E152A0 /* CustomTextField.swift */; };
 		7716871127CB1B5B006949CA /* SharkleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7716871027CB1B5B006949CA /* SharkleApp.swift */; };
 		7716871527CB1B5C006949CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7716871427CB1B5C006949CA /* Assets.xcassets */; };
 		7716871827CB1B5C006949CA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7716871727CB1B5C006949CA /* Preview Assets.xcassets */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		5BD63A9080F85F4FD37384A7 /* Pods_Sharkle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sharkle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		770DC63F27EB355D00E152A0 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		7716870D27CB1B5B006949CA /* Sharkle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sharkle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7716871027CB1B5B006949CA /* SharkleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharkleApp.swift; sourceTree = "<group>"; };
 		7716871427CB1B5C006949CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				77725CEF27E08F60006972A1 /* CornerRadius.swift */,
 				77725CF727E0909C006972A1 /* SearchView.swift */,
 				77B5504C27E2127000EDF2E6 /* AccountManager.swift */,
+				770DC63F27EB355D00E152A0 /* CustomTextField.swift */,
 			);
 			path = Sharkle;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				77AC122827E59B3D006265F9 /* AuthPlugin.swift in Sources */,
 				774605B227E0E4A600AC29C2 /* SignUpViewModel.swift in Sources */,
 				77725CF627E08FE2006972A1 /* HomeView.swift in Sources */,
+				770DC64027EB355D00E152A0 /* CustomTextField.swift in Sources */,
 				77725CF027E08F60006972A1 /* CornerRadius.swift in Sources */,
 				7716871127CB1B5B006949CA /* SharkleApp.swift in Sources */,
 				77725CE427E08E1D006972A1 /* LoginView.swift in Sources */,

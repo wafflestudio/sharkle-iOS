@@ -14,18 +14,27 @@ final class LoginViewModel: ObservableObject {
     @Published var password: String = ""
     private var cancellableBag = Set<AnyCancellable>()
     
-    func login() {
-        AuthAPI.login(email: email, password: password)
+    func login() -> Bool {
+        var success: Bool = false
+        
+        AuthAPI.login(email: self.email, password: self.password)
             .sink(receiveCompletion: { completion in
-                guard case let .failure(error) = completion else { return }
-                print(error)
-            }, receiveValue: { response in 
-                guard let data = try? response.map(LoginResponse.self) else {
+                switch completion {
+                case .failure(let error):
+                    print("Login Error")
+                    success = false
+                case .finished:
+                    print("Finished")
+                }
+            }, receiveValue: { response in
+                success = true
+                guard let data = try? response.mapJSON() else {
                     return
                 }
-                
-                AccountManager.isLoggedIn = true
+                print("data: ", data)
             })
-            .store(in: &cancellableBag)
+            .store(in: &self.cancellableBag)
+        
+        return success
     }
 }
