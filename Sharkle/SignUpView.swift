@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SignUpView: View {
     @ObservedObject private var viewModel = SignUpViewModel()
-    
+    @Environment(\.presentationMode) private var presentationMode
     
     var body: some View {
         VStack {
@@ -41,7 +41,15 @@ struct SignUpView: View {
             }
             .padding()
             Button(action: {
-                
+                viewModel.signup()
+                    .sink { success in
+                        if success {
+                            self.presentationMode.wrappedValue.dismiss()
+                        } else {
+                            print("회원가입 실패!")
+                        }
+                    }
+                    .store(in: &viewModel.cancellableBag)
             }, label: {
                 Text("회원가입")
                     .foregroundColor(.white)

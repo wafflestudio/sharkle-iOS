@@ -22,7 +22,7 @@ final class SignUpViewModel: ObservableObject {
     @Published var confirmPasswordError: String?
     @Published var usernameError: String?
     @Published var userIdError: String?
-    private var cancellableBag = Set<AnyCancellable>()
+    var cancellableBag = Set<AnyCancellable>()
     
     init() {
         emailValidPublisher
@@ -128,27 +128,30 @@ final class SignUpViewModel: ObservableObject {
     }
     
         
-    func signup() -> Bool {
-        var success: Bool = false
-        
-        AuthAPI.signup(email: self.email, userId: self.userId, password: self.password, username: self.username)
-            .sink(receiveCompletion: { completion in
-                switch completion {
-                case .finished:
-                    print("finished")
-                case .failure(let error):
-                    print("SignUp Error")
-                    success = false
-                }
-            }, receiveValue: { response in
-                success = true
-                guard let data = try? response.mapJSON() else {
-                    return
-                }
-                print("data: ", data)
-            })
-            .store(in: &self.cancellableBag)
-        
-        return success
+    func signup() -> AnyPublisher<Bool, Never> {
+        return Future<Bool, Never> { promise in
+            AuthAPI.signup(email: self.email, userId: self.userId, password: self.password, username: self.username)
+                .sink(receiveCompletion: { completion in
+                    switch completion {
+                    case .finished:
+                        print("finished")
+                    case .failure(_):
+                        print("SignUp Error")
+                    }
+                }, receiveValue: { response in
+                    guard let data = try? response.mapJSON() else {
+                        return
+                    }
+                    print("data: ", data)
+                    
+                    if response.statusCode == 201 {
+                        promise(.success(true))
+                    } else {
+                        promise(.success(false))
+                    }
+                })
+                .store(in: &self.cancellableBag)
+        }
+        .eraseToAnyPublisher()
     }
 }

@@ -70,11 +70,16 @@ struct LoginView: View {
                     
                     HStack(spacing: 17) {
                         Button {
-                            if viewModel.login() {
-                                isLoggedIn = true
-                            } else {
-                                print("로그인 에러")
-                            }
+                            viewModel.login()
+                                .sink { success in
+                                    if success {
+                                        isLoggedIn = true
+                                    } else {
+                                        print("로그인 실패!")
+                                    }
+                                }
+                                .store(in: &viewModel.cancellableBag)
+                            
                         } label: {
                             Text("로그인")
                                 .foregroundColor(.white)

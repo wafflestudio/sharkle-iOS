@@ -12,29 +12,33 @@ import Combine
 final class LoginViewModel: ObservableObject {
     @Published var email: String = ""
     @Published var password: String = ""
-    private var cancellableBag = Set<AnyCancellable>()
+    var cancellableBag = Set<AnyCancellable>()
     
-    func login() -> Bool {
-        var success: Bool = false
-        
-        AuthAPI.login(email: self.email, password: self.password)
-            .sink(receiveCompletion: { completion in
-                switch completion {
-                case .failure(let error):
-                    print("Login Error")
-                    success = false
-                case .finished:
-                    print("Finished")
-                }
-            }, receiveValue: { response in
-                success = true
-                guard let data = try? response.mapJSON() else {
-                    return
-                }
-                print("data: ", data)
-            })
-            .store(in: &self.cancellableBag)
-        
-        return success
+    func login() -> AnyPublisher<Bool, Never> {
+        return Future<Bool, Never> { promise in
+            AuthAPI.login(email: self.email, password: self.password)
+                
+                .sink(receiveCompletion: { completion in
+                    switch completion {
+                    case .failure(_):
+                        print("Login Error")
+                    case .finished:
+                        print("Finished")
+                    }
+                }, receiveValue: { response in
+                    guard let data = try? response.mapJSON() else {
+                        return
+                    }
+                    print(data)
+                    
+                    if response.statusCode == 200 {
+                        promise(.success(true))
+                    } else {
+                        promise(.success(false))
+                    }
+                })
+                .store(in: &self.cancellableBag)
+        }
+        .eraseToAnyPublisher()
     }
 }
