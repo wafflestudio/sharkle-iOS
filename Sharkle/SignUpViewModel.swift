@@ -139,16 +139,16 @@ final class SignUpViewModel: ObservableObject {
                         print("SignUp Error")
                     }
                 }, receiveValue: { response in
-                    guard let data = try? response.mapJSON() else {
-                        return
-                    }
-                    print("data: ", data)
-                    
                     if response.statusCode == 201 {
                         promise(.success(true))
                     } else {
                         promise(.success(false))
                     }
+                    
+                    guard let data = try? response.map(LoginResponse.self) else { return }
+                    guard let refreshToekn = data.refresh else { return }
+                    AccountManager.refreshToken = refreshToekn
+                    AccountManager.accessToken = data.access
                 })
                 .store(in: &self.cancellableBag)
         }

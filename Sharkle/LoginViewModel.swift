@@ -17,7 +17,6 @@ final class LoginViewModel: ObservableObject {
     func login() -> AnyPublisher<Bool, Never> {
         return Future<Bool, Never> { promise in
             AuthAPI.login(email: self.email, password: self.password)
-                
                 .sink(receiveCompletion: { completion in
                     switch completion {
                     case .failure(_):
@@ -26,16 +25,16 @@ final class LoginViewModel: ObservableObject {
                         print("Finished")
                     }
                 }, receiveValue: { response in
-                    guard let data = try? response.mapJSON() else {
-                        return
-                    }
-                    print(data)
-                    
                     if response.statusCode == 200 {
                         promise(.success(true))
                     } else {
                         promise(.success(false))
                     }
+                    
+                    guard let data = try? response.map(LoginResponse.self) else { return }
+                    guard let refreshToekn = data.refresh else { return }
+                    AccountManager.refreshToken = refreshToekn
+                    AccountManager.accessToken = data.access
                 })
                 .store(in: &self.cancellableBag)
         }

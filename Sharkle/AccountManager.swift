@@ -7,8 +7,11 @@
 
 import Foundation
 import SwiftUI
+import Combine
 
 struct AccountManager {
+    static private var cancellableBag = Set<AnyCancellable>()
+    
     static var refreshToken: String? {
         get {
             return UserDefaults.standard.value(forKey: "RefreshToken") as? String
@@ -29,14 +32,30 @@ struct AccountManager {
         }
     }
     
-    static var isLoggedIn: Bool {
-        get {
-            guard let isLoggedIn = UserDefaults.standard.value(forKey: "IsLoggedIn") as? Bool else { return false }
-            return isLoggedIn
-        }
+    static func verifyToken(token: String) {
+        AuthAPI.verify(token: token)
+            .sink(receiveCompletion: { completion in
+                
+            }, receiveValue: { response in
+                if response.statusCode == 200 {
+                    
+                } else {
+                    
+                }
+            })
+            .store(in: &cancellableBag)
+            
+    }
+    
+    static func refreshing() {
+        guard let refreshToken = self.refreshToken else { return }
         
-        set {
-            UserDefaults.standard.setValue(newValue, forKey: "IsLoggedIn")
-        }
+        AuthAPI.refresh(refresh: refreshToken)
+            .sink(receiveCompletion: { completion in
+                
+            }, receiveValue: { response in
+                
+            })
+            .store(in: &cancellableBag)
     }
 }
