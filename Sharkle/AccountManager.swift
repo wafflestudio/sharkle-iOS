@@ -35,7 +35,12 @@ struct AccountManager {
     static func verifyToken(token: String) {
         AuthAPI.verify(token: token)
             .sink(receiveCompletion: { completion in
-                
+                switch completion {
+                case .finished:
+                    print("finished")
+                case .failure(_):
+                    print("Verify Token Error")
+                }
             }, receiveValue: { response in
                 if response.statusCode == 200 {
                     
@@ -52,7 +57,12 @@ struct AccountManager {
         
         AuthAPI.refresh(refresh: refreshToken)
             .sink(receiveCompletion: { completion in
-                
+                switch completion {
+                case .finished:
+                    print("finished")
+                case .failure(_):
+                    print("Refresh Token Error")
+                }
             }, receiveValue: { response in
                 
             })
