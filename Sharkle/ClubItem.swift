@@ -12,7 +12,7 @@ struct ClubItem: View {
         VStack(alignment: .leading, spacing: 5) {
             Image(systemName: "")
                 .frame(width: 84, height: 84, alignment: .center)
-                .background(.gray)
+                .background(Color("LightGray"))
                 .cornerRadius(15)
             
             Text("동아리 이름 1")
