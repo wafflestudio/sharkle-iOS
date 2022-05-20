@@ -13,16 +13,18 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             VStack {
-                TopTabBar(selected: $selected)
-                    .padding(.top, 0)
-                    .clipped()
-                    .shadow(color: .gray.opacity(0.2), radius: 3, x: 0, y: 5)
-                
-                switch selected {
-                case 0:
-                    MyPageView()
-                default:
-                    MyPageView()
+                ScrollView(.vertical) {
+                    ClubItemsRow()
+                    
+                    VStack(alignment: .leading, spacing: 15) {
+                        Text("최신 게시글")
+                            .font(.system(size: 24, weight: .bold))
+                            .padding(.leading, 15)
+                        
+                        ForEach(1..<10) { _ in
+                            ClubRow()
+                        }
+                    }
                 }
             }
             .navigationBarTitleDisplayMode(.inline)

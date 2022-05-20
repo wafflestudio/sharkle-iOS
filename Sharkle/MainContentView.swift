@@ -14,6 +14,7 @@ struct MainContentView: View {
         case home
         case search
         case profile
+        case calender
         case setting
     }
     
