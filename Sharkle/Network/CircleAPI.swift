@@ -102,28 +102,6 @@ extension CircleService: TargetType {
     }
 }
 
-struct Circle: Codable {
-    var id: Int
-    var type0: Int
-    var type1: Int
-    var name: String
-    var bio: String
-    var introduction: String?
-    var tag: String
-    var homepage: Homepage
-    
-    struct Homepage: Codable {
-        var id: Int
-        var homepage: String?
-        var facebook: String?
-        var instagram: String?
-        var twitter: String?
-        var youtube: String?
-        var tiktok: String?
-        var band: String?
-    }
-}
-
 struct CircleAPI {
     private static var provider = MoyaProvider<CircleService>(plugins: [AuthPlugin()])
     
