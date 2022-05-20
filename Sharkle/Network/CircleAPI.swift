@@ -163,15 +163,15 @@ struct CircleAPI {
                                                      type1: circle.type1,
                                                      name: circle.name,
                                                      bio: circle.bio,
-                                                     introduction: circle.introduction,
+                                                     introduction: circle.introduction ?? "",
                                                      tag: circle.tag,
-                                                     homepage: circle.homepage.homepage,
-                                                     facebook: circle.homepage.facebook,
-                                                     instagram: circle.homepage.instagram,
-                                                     twitter: circle.homepage.twitter,
-                                                     youtube: circle.homepage.youtube,
-                                                     tiktok: circle.homepage.tiktok,
-                                                     band: circle.homepage.band))
+                                                     homepage: circle.homepage.homepage ?? "",
+                                                     facebook: circle.homepage.facebook ?? "",
+                                                     instagram: circle.homepage.instagram ?? "",
+                                                     twitter: circle.homepage.twitter ?? "",
+                                                     youtube: circle.homepage.youtube ?? "",
+                                                     tiktok: circle.homepage.tiktok ?? "",
+                                                     band: circle.homepage.band ?? ""))
     }
  
     
