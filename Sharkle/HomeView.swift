@@ -8,13 +8,25 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State private var selected: Int = 0
+    @ObservedObject private var viewModel = HomeViewModel()
     
     var body: some View {
         NavigationView {
             VStack {
                 ScrollView(.vertical) {
-                    ClubItemsRow()
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text("지금 알림 신청 중!")
+                            .font(.system(size: 24, weight: .bold))
+                        
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack() {
+                                ForEach(viewModel.circles, id: \.id) { circle in
+                                    ClubItem(circle: circle)
+                                }
+                            }
+                        }
+                        .frame(width: 360, height: 128)
+                    }
                     
                     VStack(alignment: .leading, spacing: 15) {
                         Text("최신 게시글")
@@ -54,6 +66,9 @@ struct HomeView: View {
                             .foregroundColor(.black)
                     }
                 }
+            }
+            .onAppear {
+                self.viewModel.apply()
             }
         }
     }

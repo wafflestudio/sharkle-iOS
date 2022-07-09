@@ -10,7 +10,7 @@ import SwiftUI
 struct MyPageView: View {
     var body: some View {
         ScrollView(.vertical) {
-            ClubItemsRow()
+            //ClubItemsRow(circles: [Circle])
             
             VStack(alignment: .leading, spacing: 15) {
                 Text("Now")

@@ -11,7 +11,8 @@ import Moya
 
 enum CircleService {
     case createCircle(type0: Int, type1: Int, name: String, bio: String, introduction: String, tag: String, homepage: String, facebook: String, instagram: String, twitter: String, youtube: String, tiktok: String, band: String)
-    case getCircle(name: String, tag: String, tag_str: String, type0: String, type1: String, offset: Int, limit: Int)
+    case getCircle
+    case searchCircle(name: String, tag: String, tag_str: String, type0: String, type1: String, offset: Int, limit: Int)
     case viewCircle(id: Int)
     case editCircle(id: Int, type0: Int, type1: Int, name: String, bio: String, introduction: String, tag: String, homepage: String, facebook: String, instagram: String, twitter: String, youtube: String, tiktok: String, band: String)
     case deleteCircle(id: Int)
@@ -28,6 +29,8 @@ extension CircleService: TargetType {
             return "/circle/"
         case .getCircle:
             return "/circle/"
+        case .searchCircle:
+            return "/circle/"
         case let .viewCircle(id):
             return "/circle/\(id)/"
         case let .editCircle(id):
@@ -42,6 +45,8 @@ extension CircleService: TargetType {
         case .createCircle:
             return .post
         case .getCircle:
+            return .get
+        case .searchCircle:
             return .get
         case .viewCircle:
             return .get
@@ -68,7 +73,9 @@ extension CircleService: TargetType {
                                           "youtube": youtube,
                                           "tiktok": tiktok,
                                           "band": band])
-        case let .getCircle(name, tag, tag_str, type0, type1, offset, limit):
+        case .getCircle:
+            return .requestPlain
+        case let .searchCircle(name, tag, tag_str, type0, type1, offset, limit):
             return .requestJSONEncodable(["name": name,
                                           "tag": tag,
                                           "tag_str": tag_str,
@@ -109,8 +116,8 @@ struct CircleAPI {
         return provider.requestPublisher(.createCircle(type0: circle.type0,
                                                        type1: circle.type1,
                                                        name: circle.name,
-                                                       bio: circle.bio,
-                                                       introduction: circle.bio ??,
+                                                       bio: circle.bio ?? "",
+                                                       introduction: circle.introduction ?? "",
                                                        tag: circle.tag,
                                                        homepage: circle.homepage.homepage ?? "",
                                                        facebook: circle.homepage.facebook ?? "",
@@ -121,8 +128,12 @@ struct CircleAPI {
                                                        band: circle.homepage.band ?? ""))
     }
     
-    static func getCircle(name: String, tag: String, tag_str: String, type0: String, type1: String, offset: Int, limit: Int) -> AnyPublisher<Response, MoyaError> {
-        return provider.requestPublisher(.getCircle(name: name,
+    static func getCircle() -> AnyPublisher<CircleResponse, MoyaError> {
+        return provider.requestPublisher(.getCircle).map(CircleResponse.self).eraseToAnyPublisher()
+    }
+ 
+    static func searchCircle(name: String, tag: String, tag_str: String, type0: String, type1: String, offset: Int, limit: Int) -> AnyPublisher<Response, MoyaError> {
+        return provider.requestPublisher(.searchCircle(name: name,
                                                     tag: tag,
                                                     tag_str: tag_str,
                                                     type0: type0,
@@ -140,7 +151,7 @@ struct CircleAPI {
                                                      type0: circle.type0,
                                                      type1: circle.type1,
                                                      name: circle.name,
-                                                     bio: circle.bio,
+                                                     bio: circle.bio ?? "",
                                                      introduction: circle.introduction ?? "",
                                                      tag: circle.tag,
                                                      homepage: circle.homepage.homepage ?? "",

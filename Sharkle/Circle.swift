@@ -7,24 +7,32 @@
 
 import Foundation
 
-struct Circle: Codable {
+struct Circle: Codable, Hashable {
     var id: Int
     var type0: Int
     var type1: Int
     var name: String
-    var bio: String
+    var bio: String?
     var introduction: String?
     var tag: String
+    var tag_integer: [Int]
     var homepage: Homepage
-    
-    struct Homepage: Codable {
-        var id: Int
-        var homepage: String?
-        var facebook: String?
-        var instagram: String?
-        var twitter: String?
-        var youtube: String?
-        var tiktok: String?
-        var band: String?
-    }
+}
+
+struct Homepage: Codable, Hashable {
+    var id: Int
+    var homepage: String?
+    var facebook: String?
+    var instagram: String?
+    var twitter: String?
+    var youtube: String?
+    var tiktok: String?
+    var band: String?
+}
+
+struct CircleResponse: Codable {
+    let count: Int
+    let next: String?
+    let previous: String?
+    let results: [Circle]
 }
